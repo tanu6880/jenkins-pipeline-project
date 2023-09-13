@@ -3,13 +3,13 @@ pileline{
 
 	stages{
 
-		stage("Complie")
+		stage('Complie')
 		{
 			steps{
 				sh 'javac Main.java'
 			}
 		}
-		stage("Run")
+		stage('Run')
 		{
 			steps{
 				sh 'java Main'
