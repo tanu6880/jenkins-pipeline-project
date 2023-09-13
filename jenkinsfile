@@ -1,0 +1,21 @@
+pileline(
+	agent any
+
+	stages{
+
+		stage("Complie")
+		{
+			steps{
+				sh 'javac Main.java'
+			}
+		}
+		stage("Run")
+		{
+			steps{
+				sh 'java Main'
+			}
+		}
+
+	}
+
+)
