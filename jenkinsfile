@@ -1,4 +1,4 @@
-pileline{
+pipseline{
 	agent any
 
 	stages{
