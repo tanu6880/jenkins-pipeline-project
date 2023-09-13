@@ -7,7 +7,7 @@ public class Main{
 		{
 			for(int j=i;j<10;j++)
 			{
-				System.out.println("* ");
+				System.out.print("* ");
 			}
 
 			System.out.println();
