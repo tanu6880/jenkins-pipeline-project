@@ -1,11 +1,16 @@
 pipeline {
     agent any
 
+    environment
+    {
+        version_name = "1.12323"
+    }
     stages {
         stage('Compile') {
             steps {
                 // Compile the Java program
                 sh 'javac Main.java'
+                sh 'echo "Yhi answer hai ${version_name}"'
             }
         }
         stage('Run') {
@@ -13,6 +18,21 @@ pipeline {
                 // Run the compiled Java program
                 sh 'java Main'
             }
+        }
+    }
+    post
+    {
+        always
+        {
+            sh 'echo "Always"'
+        }
+        success
+        {
+            sh 'echo "Successfully Completed" '
+        }
+        failure
+        {
+            sh ' echo "Sorry failed try Again"'
         }
     }
 }
